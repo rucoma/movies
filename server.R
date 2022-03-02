@@ -24,9 +24,7 @@ shinyServer(function(input, output) {
         ),
       x = ~get(input$axis_x), y = ~get(input$axis_y),
       # Hover text:
-      text = ~paste('Title: ', series_title, '<br>Director: ', director, '<br>Rating:', imdb_rating),
-      color = ~imdb_rating,
-      size = ~runtime_num
+      text = ~paste('Title: ', series_title, '<br>Director: ', director, '<br>Rating:', imdb_rating)
     ) %>%
       layout(title = 'Movie explorer',
              plot_bgcolor = "#F3F7FE",
